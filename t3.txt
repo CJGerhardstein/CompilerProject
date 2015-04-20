@@ -1,0 +1,31 @@
+program demo;
+  int x, y, z; 
+
+  function fee;
+    int x, y;
+
+  begin
+    y = 20 + 3;
+
+    x = z - 5; // 75
+
+    z = z - 10; // 70
+
+    cout << 'z 70: ' << z << endl;
+    cout << 'y 23: ' << y << endl;
+    cout << 'x 75: ' << x << endl << endl;
+    y = y + x;
+    z = y - x; 
+    cout << 'should be 98: ' << y << endl;
+    cout << 'should be 23: ' << z << endl
+ 
+  end;
+
+begin
+  x = 5;
+  y = 20;
+  z = 80;
+  fee;
+  cout << 'should be 23: ' << z << endl
+
+end.

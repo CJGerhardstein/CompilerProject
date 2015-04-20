@@ -1,0 +1,15 @@
+program test;
+
+  int int1, int2;
+  boolean bool1, bool2;
+
+begin
+
+   int1 = 20;
+   int2 = 10;
+   bool1 = false;
+   bool2 = (int1 > int2) == bool1;
+   cout << 'should be false or 0: ' << bool2;
+   cin
+
+end.

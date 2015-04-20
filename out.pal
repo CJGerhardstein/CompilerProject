@@ -1,0 +1,71 @@
+$junk #1
+$main movw SP R0
+addw #0 SP
+jmp $0 
+: starting function
+$blast movw r0 r0
+addw #0 SP
+movw SP R1
+outw #4
+movw #0 +4@fp
+addw #4 sp
+
+: found digit
+
+: starting isEqual relop
+cmpw +0@fp +4@fp
+bneq $3 
+movw #1 +8@fp
+addw #4 sp
+jmp $5
+$3 movw #0 +8@fp
+
+: finished less relop
+$5 movw +8@fp +8@fp
+addw #4 sp
+movw +8@fp @r1
+movw r1 sp
+addw #4 sp
+: starting if statement
+cmpw #0 -4@sp
+subw #4 SP
+beq $2 
+outb ^'
+outb ^b
+outb ^l
+outb ^a
+outb ^s
+outb ^t
+outb ^o
+outb ^f
+outb ^f
+jmp $1 
+$2 movw r0 r0
+movw SP R1
+movw +0@fp @r1
+movw r1 sp
+addw #4 sp
+outw -4@sp 
+outb #10
+movw SP R1
+movw #1 +8@fp
+addw #4 sp
+
+: found digit
+
+: starting minus operation
+movw +0@fp +12@fp
+subw +8@fp +12@fp
+addw #4 sp
+
+: finished minus operation
+movw +12@fp @r1
+movw r1 sp
+addw #4 sp
+movw -4@sp +0@fp
+: returned from parse_expr @followId equal_st
+subw #4 sp
+movw SP R1
+movw +0@fp @r1
+movw r1 sp
+addw #4 sp

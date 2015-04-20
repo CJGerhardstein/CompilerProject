@@ -1,0 +1,13 @@
+program test;
+
+   boolean b1, b2, b3;
+
+begin
+  b1 = true;
+  b2 = true and false;
+  
+  b3 = (b1 and b2) or (b1 or b2);
+  cout << 'should be true or 1: ' << b1;
+  cin
+
+end.

@@ -1,0 +1,10 @@
+program test;
+
+   int x;
+
+begin
+
+  x = (((9))) mod 8;
+  cout << 'Should be 1: ' << x;
+  cin
+end.

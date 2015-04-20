@@ -1,0 +1,50 @@
+program demo;
+  int x, y, z;
+  boolean isTrue, isFalse;  
+
+  function fee;
+    int x, y;
+
+  begin
+    y = 20 + 3;
+    cout << 'y should be 23: ' << y << endl;
+
+    x = z - 5;
+    cout << 'y should be 23: ' << y << endl;
+    cout << 'should be 75: ' << x << endl;
+    z = z - 10;
+    cout << 'y should be 23: ' << y << endl;
+    cout << 'should be 70 ' << z << endl << endl;
+
+    cout << 'y: ' << y << endl;
+    cout << 'x: ' << x << endl << endl;
+    y = y + x;
+    cout << 'should be 98: ' << y << endl
+ 
+  end;
+
+  function foo;
+    int x;
+  begin
+    
+    x = 8;
+    cout << 'x b4 fee should be 8: ' << x << endl;
+    fee;
+    cout << 'x after fee called. should be 8: ' << x << endl;
+    while y < 15 do
+	begin
+	y = y + 1;
+	cout << 'y: ' << y << endl
+	end
+  end;
+
+
+
+begin
+  x = 5;
+  y = 20;
+  z = 80;
+  foo;
+  cout << 'should be 70 ' << z << endl
+
+end.
